@@ -8,7 +8,7 @@ class App extends Component {
 
   }
 
-  componentDidmount () {
+  componentDidMount () {
     const { store } = this.props
 
 
@@ -24,13 +24,16 @@ class App extends Component {
       day: 'monday',
       meal: 'breakfast',
       recipe: {
-        meal: this.input.value
+        label: this.input.value
       }
+      
     }))
-
     this.input.value = ''
+    console.log(this.state.calendar)
+  
   }
   render() {
+    
     return (
       <div>
         <input 
